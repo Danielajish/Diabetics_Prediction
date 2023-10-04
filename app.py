@@ -25,7 +25,7 @@ model.close()
 ## get front end user name 
 
 preg = st.number_input('Pregnancies',0,17,0)
-glucose = st.slider('Glucose',df['Glucose'].min(),df['Glucose'].max(),df['Glucose'].min())
+glucose = st.number_input('Glucose',df['Glucose'].min(),df['Glucose'].max(),df['Glucose'].min())
 blp = st.slider('BloodPressure',df['BloodPressure'].min(),df['BloodPressure'].max(),df['BloodPressure'].min()) 
 skin = st.slider('SkinThickness',df['SkinThickness'].min(),df['SkinThickness'].max(),df['SkinThickness'].min()) 
 insl = st.slider('Insulin',df['SkinThickness'].min(),df['SkinThickness'].max(),df['SkinThickness'].min())
