@@ -1,8 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as  sns
-import numpy as np
 from sklearn.preprocessing import StandardScaler
 import pickle
 st.title('Web Deployment of Medical Diagnostic app 😊💉')
@@ -16,12 +13,7 @@ if st.sidebar.checkbox('View Data',False):
     st.write(df)
     
 if st.sidebar.checkbox('View Distributions',False):
-    j =1
-    for i in df.select_dtypes(include='number').columns:
-        plt.subplot(3,3,j)
-        sns.distplot(df[i],kde =True)
-        j +=1
-    plt.tight_layout()
+    df.hist()
     st.pyplot()
 
     #load pickle
